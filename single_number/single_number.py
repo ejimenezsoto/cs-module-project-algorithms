@@ -2,10 +2,16 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
-def single_number(arr):
-    # Your code here
 
-    pass
+
+def single_number(arr):
+    # Plan
+    # count similar elements in list
+    # filter singular item out
+    # map filtered item to new list
+    new_arr = [x for x in arr if arr.count(x) % 2 != 0]
+    # return new list item
+    return new_arr[0]
 
 
 if __name__ == '__main__':
